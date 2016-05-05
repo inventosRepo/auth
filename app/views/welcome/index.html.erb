@@ -1,0 +1,13 @@
+<h1>Battle city</h1>
+<div id="user_nav">
+	<% if user_signed_in?%>
+		<p>Вы вошли как <%=current_user.email %> <%= link_to "Выйти", destroy_user_session_path, :method => :delete %></p> 
+		<p><%= link_to "Ваш профиль", persons_profile_path %></p>
+	<% else %>
+		<p>Пожалуйста <%= link_to "зарегистрируйтесь", new_user_registration_path %> или 
+		<%= link_to "выполните вход", new_user_session_path %></p>
+	<% end %>
+</div>
+
+<canvas id="map" style="background-color:black; height:500px; width:500px";></canvas>
+
