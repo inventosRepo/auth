@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'persons/profile'
   root 'welcome#index'
+  get 'welcome/chat'	
   get 'welcome/index', as: 'user_root'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

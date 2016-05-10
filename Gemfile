@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
-
+gem 'websocket-rails'
 gem 'devise'
+gem 'em-websocket'
+gem 'eventmachine'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
