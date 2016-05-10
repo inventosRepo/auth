@@ -1,0 +1,16 @@
+
+<h1>Battle city</h1>
+<div>
+	<% if user_signed_in?%>
+		<p>Вы вошли как <%=current_user.email %> <%= link_to "Выйти", destroy_user_session_path, :method => :delete %></p>
+		<div id="keys">
+			<div style="width:200px; height:200px; background-color:blue; position: absolute; top: 250px;">Влево</div>
+			<div style="width:200px; height:200px; background-color:red; position: absolute; left: 205px; ">Вверх</div>
+			<div style="width:200px; height:200px; background-color:yellow; position: absolute; left: 205px; top: 350px;">Вниз</div>
+			<div style="width:200px; height:200px; background-color:green; position: absolute; left: 405px; top: 250px;">Вправо</div>
+			<div style="width:605px; height:200px; background-color:black; position: absolute;  top: 550px;">Огонь</div>
+		</div>
+	<% else %>
+		<%= link_to "введите код", code_new_path %></p>
+	<% end %>
+</div>

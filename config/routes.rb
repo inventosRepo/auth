@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  
+
+  get 'code/new'
 
   devise_for :users
-	
+  post "persons/profile"
+  post "code/new"
+  post "code/hi"
+  post "persons/generate"
   get 'welcome/index'
-  get 'persons/profile'  
-  root 'welcome#index'   
-  get 'welcome/index', as: 'user_root' 
+  get 'persons/profile'
+  root 'welcome#index'
+  get 'welcome/index', as: 'user_root'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -14,7 +18,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+
 
   # Example resource route with options:
   #   resources :products do
